@@ -21,7 +21,7 @@ namespace DotnetCoreMssql.Controllers
         public IActionResult GetAll()
         {
             var books = _bookRepository.GetAll();
-            return Ok(books);
+            return Ok(new Response(books));
         }
 
         [HttpGet]
